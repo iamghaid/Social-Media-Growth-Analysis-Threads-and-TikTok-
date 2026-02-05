@@ -1,8 +1,7 @@
 # Social-Media-Growth-Analysis-Threads-and-TikTok-
 This project analyzes user growth data from two major social media platforms: Threads and TikTok. The goal is to distinguish between real, long-term growth and temporary "success bubble”
-Below is the content of the "Social Media Growth Analysis" document converted into a GitHub-style README.md layout.
 
-## 📝 Executive Summary
+##  Executive Summary
 
 This project analyzes two years of simulated user data from **TikTok** and **Threads** to distinguish sustainable growth from temporary "success bubbles". Using Spearman correlation analysis, the study found that TikTok's growth is sustainable, while Threads exhibited classic bubble patterns.
 
@@ -21,7 +20,7 @@ This project analyzes two years of simulated user data from **TikTok** and **Thr
 
 
 
-## 📊 Dataset Description
+##  Dataset Description
 
 The project analyzes daily timeline data for Threads and TikTok to identify the difference between real growth and temporary hype.
 
@@ -52,7 +51,7 @@ The project analyzes daily timeline data for Threads and TikTok to identify the 
 
 
 
-## 🎯 Project Goals
+##  Project Goals
 
 * 
 **Analyze Engagement:** Determine if high DAU is supported by real time spent on the app.
@@ -67,7 +66,7 @@ The project analyzes daily timeline data for Threads and TikTok to identify the 
 
 
 
-## 🔍 Exploratory Data Analysis (EDA)
+##  Exploratory Data Analysis (EDA)
 
 Spearman Correlation was used to measure the strength and direction of relationships between numeric metrics.
 
@@ -121,7 +120,7 @@ A data-driven framework developed to detect unsustainable growth in real-time.
 
  |
 
-## ⚠️ Limitations & Future Research
+##  Limitations & Future Research
 
 * 
 **Data Source:** This analysis uses simulated datasets modeled on industry trends from Business of Apps, Statista, and Similarweb.
