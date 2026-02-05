@@ -2,12 +2,6 @@
 This project analyzes user growth data from two major social media platforms: Threads and TikTok. The goal is to distinguish between real, long-term growth and temporary "success bubble”
 Below is the content of the "Social Media Growth Analysis" document converted into a GitHub-style README.md layout.
 
----
-
-# Social Media Growth Analysis: Sustainable vs. Bubble
-
-**Data Analyst Project | Comparative Study**
-
 ## 📝 Executive Summary
 
 This project analyzes two years of simulated user data from **TikTok** and **Threads** to distinguish sustainable growth from temporary "success bubbles". Using Spearman correlation analysis, the study found that TikTok's growth is sustainable, while Threads exhibited classic bubble patterns.
