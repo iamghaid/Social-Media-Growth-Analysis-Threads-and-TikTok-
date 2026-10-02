@@ -1,6 +1,14 @@
 # Social Media Growth Analysis — Threads & TikTok
 
-An open-source educational study by **Gheid Abdulkarim**, exploring sustainable growth and temporary launch hype using simulated daily platform metrics.
+An open-source educational project by **Echo team**, exploring sustainable growth and temporary launch hype using simulated daily platform metrics.
+
+## Echo team
+
+- **Gheid Abdulkarim Abomaghara:** analysis, metrics and problem solving.
+- **Rasha Abdulhameed Naji:** data collection and cleaning.
+- **Elaf Hamed Alhajj:** presentation and visualization.
+
+The original team deliverables are available unchanged: [Word study](docs/echo-study-original.docx) and [19-slide PowerPoint presentation](docs/echo-presentation-original.pptx).
 
 ![Growth comparison](results/growth-comparison.png)
 
@@ -45,12 +53,12 @@ Spearman correlations summarize monotonic associations. The illustrative organic
 
 The original study frames Threads as a launch-spike scenario and TikTok as a growing scenario. Recomputed results are in `results/summary.json`. Different calendar periods, scales and shared time trends limit comparisons. Proposed bubble-warning thresholds remain unvalidated research hypotheses, not an implemented detection system.
 
-The original notes mention Business of Apps, Statista and Similarweb as inspiration without source URLs or a generator; provenance cannot be independently reproduced from those references.
+The original Word study lists Business of Apps, Statista, Similarweb and Sensor Tower as inspiration for simulated data. See its source statement. No simulation generator is supplied, so data provenance cannot be fully reproduced from those references. Original document figures are historical claims; recomputed coefficients are in `results/summary.json` and may differ.
 
 ## Open source
 
-Code, documentation and included simulated datasets use the [MIT License](LICENSE). Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
+Code, repository documentation and included simulated datasets use the [MIT License](LICENSE). The original collaborative Word and PowerPoint deliverables retain their authors' rights and are not relicensed by that license. Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## ملخص عربي
 
-مشروع مفتوح المصدر لتحليل بيانات نمو محاكاة لمنصتي Threads وTikTok، من إعداد غيد عبدالكريم. يضم تنظيف البيانات والتحليل الاستكشافي وارتباط Spearman والرسوم المقارنة ودراسة موثقة. Twitter/X عامل خارجي في بيانات Threads فقط. البيانات تعليمية وليست قياسات حقيقية للمنصات، والارتباط لا يثبت السببية.
+مشروع مفتوح المصدر لتحليل بيانات نمو محاكاة لمنصتي Threads وTikTok، من إعداد فريق Echo. دور غيد عبدالكريم: التحليل والمقاييس وحل المشكلات. يضم تنظيف البيانات والتحليل الاستكشافي وارتباط Spearman والرسوم المقارنة والدراسة والعرض الأصليين. Twitter/X عامل خارجي في بيانات Threads فقط. البيانات تعليمية وليست قياسات حقيقية للمنصات، والارتباط لا يثبت السببية.

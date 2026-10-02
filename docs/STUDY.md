@@ -1,6 +1,6 @@
 # Sustainable Growth and Launch Hype: an Exploratory Simulation Study
 
-**Author:** Gheid Abdulkarim  
+**Team:** Echo — Gheid Abdulkarim Abomaghara (analysis, metrics, problem solving), Rasha Abdulhameed Naji (data collection, cleaning), Elaf Hamed Alhajj (presentation, visualization)  
 **Platforms:** Threads and TikTok  
 **Status:** Educational exploratory analysis, not a peer-reviewed publication
 
@@ -38,13 +38,13 @@ The original notes propose monitoring the organic gap, engagement-growth synchro
 - Acquisition percentages do not directly measure active-user retention; organic DAU is a proxy.
 - Cleaning and imputation decisions can affect coefficients.
 - Original approximate numerical claims should not replace recomputed values.
-- Industry sources mentioned in the original notes have no supplied citations or reproducible generator.
+- The original Word study provides industry reference URLs, but no simulation generator is supplied.
 
 Future work: sourced observations, a documented generator, cleaning sensitivity analysis, controls for time trends and warning-rule tests on held-out periods.
 
 ## Study history
 
-[Original study notes](original-study-notes.md) preserve the previous README. This document organizes the existing analysis; it does not claim that a separate historical paper was supplied.
+[Original Word study](echo-study-original.docx) and [original 19-slide presentation](echo-presentation-original.pptx) are the supplied Echo team deliverables, preserved unchanged. [Original study notes](original-study-notes.md) preserve the previous README. This Markdown document describes the reproducible repository analysis. Original document figures may differ from the recomputed results; they are not independently validated platform statistics.
 
 ## الملخص العربي
 
