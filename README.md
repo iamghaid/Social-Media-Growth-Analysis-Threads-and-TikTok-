@@ -1,130 +1,56 @@
-# Social-Media-Growth-Analysis-Threads-and-TikTok-
-This project analyzes user growth data from two major social media platforms: Threads and TikTok. The goal is to distinguish between real, long-term growth and temporary "success bubble”
+# Social Media Growth Analysis — Threads & TikTok
 
-##  Executive Summary
+An open-source educational study by **Gheid Abdulkarim**, exploring sustainable growth and temporary launch hype using simulated daily platform metrics.
 
-This project analyzes two years of simulated user data from **TikTok** and **Threads** to distinguish sustainable growth from temporary "success bubbles". Using Spearman correlation analysis, the study found that TikTok's growth is sustainable, while Threads exhibited classic bubble patterns.
+![Growth comparison](results/growth-comparison.png)
 
-**Key Findings:**
+The datasets represent **Threads and TikTok**. Twitter/X appears only as an external `twitter_volatility_index` feature in Threads data, not as a third platform dataset.
 
-* 
-**TikTok:** High engagement correlation (0.92), 85% organic traffic, and a low churn rate (-0.15).
+**The data is simulated**, not official platform analytics or scraped user data. Results describe the included simulation; correlations do not establish causation or actual company performance.
 
+## Run locally
 
-* 
-**Threads:** High churn correlation (-0.70) and 60% paid acquisition.
+Use Python 3.12, from the repository root:
 
+```bash
+python -m venv .venv
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+# macOS / Linux: source .venv/bin/activate
+python -m pip install -r requirements.txt
+python analysis.py
+```
 
-* 
-**Threshold for Success:** Platforms with 75-90% organic growth and strong engagement correlations (>0.85) typically achieve long-term success.
+This exports cleaned data, Spearman correlation tables, a numerical summary and the comparison chart to `results/`, without API keys or network access. Open `echo notebook.ipynb` in Jupyter or VS Code, select the environment and restart/run all cells for the full original analysis.
 
+## Contents
 
+| File | Purpose |
+| --- | --- |
+| `echo notebook.ipynb` | Original exploratory notebook, repaired for sequential execution |
+| `analysis.py` | Reproducible cleaning, numerical summary and chart export |
+| `threads_light_dirty.csv` | Simulated Threads data with intentional quality issues |
+| `tiktok_light_dirty (1).csv` | Simulated TikTok data with intentional quality issues |
+| `results/` | Generated charts, cleaned data and correlation tables |
+| [Study](docs/STUDY.md) | Methodology, interpretation and limitations |
+| [Original study notes](docs/original-study-notes.md) | Preserved original README; approximate claims are not independently validated |
 
-##  Dataset Description
+## Methodology
 
-The project analyzes daily timeline data for Threads and TikTok to identify the difference between real growth and temporary hype.
+Each raw CSV contains 1,005 rows. Shared fields: `date`, `dau`, `avg_session_duration_min`, `churn_rate`, `organic_traffic_pct`. Threads adds `twitter_volatility_index`; TikTok adds `algorithm_efficiency_score`.
 
-### Data Columns
+Remove duplicates and invalid dates; drop missing Threads observations; median-impute missing TikTok DAU/churn. Retain the original assumptions of replacing non-positive DAU with the positive mean and taking absolute negative churn. These are educational assumptions, not verified corrections of business observations.
 
-* 
-`date`: Daily timeline of the data.
+Spearman correlations summarize monotonic associations. The illustrative organic DAU proxy is `DAU × organic traffic percentage / 100`. Acquisition traffic and active-user populations differ, so this is not a measured retention metric.
 
+The original study frames Threads as a launch-spike scenario and TikTok as a growing scenario. Recomputed results are in `results/summary.json`. Different calendar periods, scales and shared time trends limit comparisons. Proposed bubble-warning thresholds remain unvalidated research hypotheses, not an implemented detection system.
 
-* 
-`dau`: Daily Active Users (main growth metric).
+The original notes mention Business of Apps, Statista and Similarweb as inspiration without source URLs or a generator; provenance cannot be independently reproduced from those references.
 
+## Open source
 
-* 
-`avg_session_duration_min`: Average time spent per session.
+Code, documentation and included simulated datasets use the [MIT License](LICENSE). Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## ملخص عربي
 
-* 
-`churn_rate`: Percentage of users who stop using the app.
-
-
-* 
-`organic_traffic_pct`: Percentage of users joining naturally.
-
-
-* 
-`algorithm_score` / `twitter_volatility_index`: Internal and external growth factors.
-
-
-
-##  Project Goals
-
-* 
-**Analyze Engagement:** Determine if high DAU is supported by real time spent on the app.
-
-
-* 
-**Evaluate Sustainability:** Measure the role of organic traffic versus heavy advertising.
-
-
-* 
-**Identify Risks:** Understand how churn rates and external factors create "success bubbles".
-
-
-
-##  Exploratory Data Analysis (EDA)
-
-Spearman Correlation was used to measure the strength and direction of relationships between numeric metrics.
-
-### Threads Analysis: The "Success Bubble"
-
-* 
-**Engagement Gap:** A huge spike in DAU at launch did not correlate with a significant increase in session duration, indicating users were not truly engaged.
-
-
-* 
-**Marketing-Driven:** A massive gap between Total DAU and Organic DAU reveals that growth was artificially inflated by external promotion.
-
-
-* 
-**The Death Spiral:** High churn created a "leaky bucket" effect where users left as fast as they joined.
-
-
-* 
-**Competitor Impact:** Competitor (Twitter/X) instability was a minor factor; the real issue was a lack of product value.
-
-
-
-### TikTok Analysis: Sustainable Growth
-
-* 
-**Healthy Growth:** TikTok shows very strong positive correlations across all key engagement metrics, such as DAU vs. Session Duration (0.92).
-
-
-* 
-**Organic Discovery:** 75-90% of growth is organic, driven by user discovery and word-of-mouth rather than paid ads.
-
-
-* 
-**Smart Algorithm:** Improvements in algorithm efficiency (0.89 correlation with DAU) directly drive massive, sustainable growth.
-
-
-
-## 🛠 The "Bubble Warning System" Framework
-
-A data-driven framework developed to detect unsustainable growth in real-time.
-
-| Signal | Metric | Warning Threshold |
-| --- | --- | --- |
-| **1. Organic Gap Test** | Total DAU vs. Organic DAU | Gap exceeds 30% for >14 days 
-
- |
-| **2. Engagement-Growth Sync** | Correlation: Session Duration & DAU | Correlation drops below 0.80 for 3 weeks 
-
- |
-| **3. Churn Acceleration** | Rate of change in churn | Churn increases by >5% week-over-week 
-
- |
-
-##  Limitations & Future Research
-
-* 
-**Data Source:** This analysis uses simulated datasets modeled on industry trends from Business of Apps, Statista, and Similarweb.
-
-
-* 
-**Future Work:** Validating the Warning System on more platforms, integrating sentiment analysis, and developing predictive ML models.
+مشروع مفتوح المصدر لتحليل بيانات نمو محاكاة لمنصتي Threads وTikTok، من إعداد غيد عبدالكريم. يضم تنظيف البيانات والتحليل الاستكشافي وارتباط Spearman والرسوم المقارنة ودراسة موثقة. Twitter/X عامل خارجي في بيانات Threads فقط. البيانات تعليمية وليست قياسات حقيقية للمنصات، والارتباط لا يثبت السببية.

@@ -1,0 +1,18 @@
+{
+  "Threads": {
+    "rows": 990,
+    "start": "2023-07-05",
+    "end": "2026-03-30",
+    "mean_organic_pct": 65.03,
+    "dau_session_spearman": 0.7288,
+    "dau_churn_spearman": -0.7063
+  },
+  "TikTok": {
+    "rows": 1000,
+    "start": "2018-01-01",
+    "end": "2020-09-26",
+    "mean_organic_pct": 82.48,
+    "dau_session_spearman": 0.9796,
+    "dau_churn_spearman": -0.9047
+  }
+}
