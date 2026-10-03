@@ -62,3 +62,13 @@ Code, repository documentation and included simulated datasets use the [MIT Lice
 ## ملخص عربي
 
 مشروع مفتوح المصدر لتحليل بيانات نمو محاكاة لمنصتي Threads وTikTok، من إعداد فريق Echo. دور غيد عبدالكريم: التحليل والمقاييس وحل المشكلات. يضم تنظيف البيانات والتحليل الاستكشافي وارتباط Spearman والرسوم المقارنة والدراسة والعرض الأصليين. Twitter/X عامل خارجي في بيانات Threads فقط. البيانات تعليمية وليست قياسات حقيقية للمنصات، والارتباط لا يثبت السببية.
+
+## Interactive dashboard
+
+The lightweight static dashboard in `dashboard/` offers English/Arabic (local Thmanyah font), dark/light themes, a day-range filter, relative/absolute growth curves, interactive engagement scatterplots, and organic traffic share. All calculations use the cleaned simulated data; charts explain their limits and link to the study and downloadable CSVs.
+
+Run locally: `python -m http.server 3007 --directory dashboard`.
+Regenerate its dataset after analysis changes: `python dashboard/build_data.py`.
+Deploy the `dashboard/` directory as a static Vercel project; no backend or API keys are needed.
+
+Live dashboard: https://echo-growth-dashboard.vercel.app
